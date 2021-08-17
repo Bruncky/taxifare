@@ -48,7 +48,7 @@ class Trainer(MLFlowBase):
         self.mlflow_create_run()
 
         # Log params
-        self.mlflow_log_param('model_name', model)
+        self.mlflow_log_param('model', model)
         self.mlflow_log_param('line_count', line_count)
 
         # Log metrics
