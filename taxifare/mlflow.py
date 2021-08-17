@@ -1,7 +1,7 @@
-from memoized_property import memoized_property
-
 import mlflow
+
 from  mlflow.tracking import MlflowClient
+from memoized_property import memoized_property
 
 class MLFlowBase():
     def __init__(self, experiment_name, MLFLOW_URI):
