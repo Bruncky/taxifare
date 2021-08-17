@@ -3,15 +3,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from taxifare.transformers.distance_transformer import DistanceTransformer
 
-
 def get_pipeline(model):
+    cols = ['pickup_latitude', 'pickup_longitude', 'dropoff_latitude', 'dropoff_longitude']
+    
     pipe_distance = make_pipeline(
         DistanceTransformer(),
         StandardScaler()
     )
-
-
-    cols = ['pickup_latitude', 'pickup_longitude', 'dropoff_latitude', 'dropoff_longitude']
 
     feateng_blocks = [
         ('distance', pipe_distance, cols),
