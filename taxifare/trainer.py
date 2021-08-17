@@ -45,7 +45,7 @@ class Trainer(MLFlowBase):
     # ---------- MLFlow ----------
 
         # Create run
-        self.mlflow_create_run
+        self.mlflow_create_run()
 
         # Log params
         self.mlflow_log_param('model_name', model)
